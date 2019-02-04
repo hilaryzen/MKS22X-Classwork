@@ -11,9 +11,14 @@ public class Classwork {
     if (k == 0) {
       data.add(word);
     } else {
-      wordsH(k - 1, word + "a", data);
-      wordsH(k - 1, word + "b", data);
-      wordsH(k - 1, word + "c", data);
+      for (int i = 0; i < 3; i++) {
+        int newL = 'a' + i;
+        char newLetter = (char)newL;
+        wordsH(k - 1, word + newLetter, data);
+      }
+      //wordsH(k - 1, word + "a", data);
+      //wordsH(k - 1, word + "b", data);
+      //wordsH(k - 1, word + "c", data);
     }
   }
 
