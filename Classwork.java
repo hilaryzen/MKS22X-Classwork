@@ -23,6 +23,8 @@ public class Classwork {
   }
 
   public static void main(String[] args) {
+    System.out.println(makeAllWords(3, 3));
+    System.out.println(makeAllWords(4, 3));
     System.out.println(makeAllWords(1, 26));
     System.out.println(makeAllWords(2, 3));
   }
