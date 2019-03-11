@@ -63,8 +63,9 @@ public class Classwork {
       data[start] = pivot;
       pivotIndex = start;
     }
-    //System.out.println(Arrays.toString(data));
 
+    System.out.println(Arrays.toString(data));
+    System.out.println(testPartition(data, pivotIndex));
     return pivotIndex;
   }
 
@@ -88,7 +89,11 @@ public class Classwork {
     System.out.println(makeAllWords(2, 10));
     */
 
-    int[] data = {5, 9, 10, 2, 4, 6, 3};
-    System.out.println(partition(data, 0, 6));
+    int[] data = new int[Integer.parseInt(args[0])];
+    for (int i = 0; i < data.length; i++) {
+      data[i] = (int)(Math.random() * 100);
+    }
+    System.out.println("Original array: " + Arrays.toString(data));
+    System.out.println(partition(data, 0, data.length - 1));
   }
 }
