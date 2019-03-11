@@ -41,7 +41,12 @@ public class Classwork {
 
     while (start != end) {
       if (data[start] > pivot) {
-        
+        int start = data[start];
+        data[start] = data[end];
+        data[end] = start;
+        start += 1;
+      } else {
+        start += 1;
       }
     }
     return 0;
