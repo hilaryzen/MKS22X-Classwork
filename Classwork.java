@@ -1,4 +1,4 @@
-import java.util.ArrayList;
+import java.util.*;
 
 public class Classwork {
   public static ArrayList<String> makeAllWords(int k, int maxLetter) {
@@ -34,6 +34,7 @@ public class Classwork {
     //Picking the pivot
     int pivotIndex = (int)(Math.random() * (end - start)) + start;
     int pivot = data[pivotIndex];
+    System.out.println("Pivot: " + pivot);
     //Switching pivot to the beginning
     data[pivotIndex] = data[start];
     data[start] = pivot;
@@ -41,14 +42,17 @@ public class Classwork {
 
     while (start != end) {
       if (data[start] > pivot) {
-        int start = data[start];
+        int n = data[start];
         data[start] = data[end];
-        data[end] = start;
-        start += 1;
+        data[end] = n;
+        end -= 1;
       } else {
         start += 1;
       }
+      System.out.println(Arrays.toString(data));
     }
+    System.out.println(Arrays.toString(data));
+
     return 0;
   }
 
@@ -61,6 +65,6 @@ public class Classwork {
     */
 
     int[] data = {5, 9, 10, 2, 4, 6, 3};
-    System.out.println(partition(data, 4, 6));
+    System.out.println(partition(data, 0, 6));
   }
 }
