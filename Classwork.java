@@ -68,6 +68,18 @@ public class Classwork {
     return pivotIndex;
   }
 
+  //Function to test partition
+  public static boolean testPartition(int[] array, int pivotIndex) {
+    for (int i = 0; i < array.length; i++) {
+      if (i < pivotIndex && array[i] > array[pivotIndex]) {
+        return false;
+      } else if (i > pivotIndex && array[i] < array[pivotIndex]) {
+        return false;
+      }
+    }
+    return true;
+  }
+
   public static void main(String[] args) {
     /*
     System.out.println(makeAllWords(3, 3));
