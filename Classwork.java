@@ -31,8 +31,19 @@ public class Classwork {
   *@return the index of the final position of the pivot element.
   */
   public static int partition(int[] data, int start, int end) {
+    //Picking the pivot
     int pivotIndex = (int)(Math.random() * (end - start)) + start;
-    System.out.println(pivotIndex);
+    int pivot = data[pivotIndex];
+    //Switching pivot to the beginning
+    data[pivotIndex] = data[start];
+    data[start] = pivot;
+    start += 1;
+
+    while (start != end) {
+      if (data[start] > pivot) {
+        
+      }
+    }
     return 0;
   }
 
