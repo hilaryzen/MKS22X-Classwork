@@ -34,7 +34,7 @@ public class Classwork {
     //Picking the pivot
     int pivotIndex = (int)(Math.random() * (end - start)) + start;
     int pivot = data[pivotIndex];
-    System.out.println("Pivot: " + pivot);
+    //System.out.println("Pivot: " + pivot);
     //Switching pivot to the beginning
     data[pivotIndex] = data[start];
     data[start] = pivot;
@@ -50,9 +50,8 @@ public class Classwork {
       } else {
         start += 1;
       }
-      System.out.println(Arrays.toString(data));
+      //System.out.println(Arrays.toString(data));
     }
-    System.out.println(Arrays.toString(data));
 
     //Placing pivot in correct position
     if (data[start] > pivot) {
@@ -64,6 +63,7 @@ public class Classwork {
       data[start] = pivot;
       pivotIndex = start;
     }
+    //System.out.println(Arrays.toString(data));
 
     return pivotIndex;
   }
