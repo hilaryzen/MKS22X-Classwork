@@ -38,6 +38,7 @@ public class Classwork {
     //Switching pivot to the beginning
     data[pivotIndex] = data[start];
     data[start] = pivot;
+    pivotIndex = start;
     start += 1;
 
     while (start != end) {
@@ -53,7 +54,18 @@ public class Classwork {
     }
     System.out.println(Arrays.toString(data));
 
-    return 0;
+    //Placing pivot in correct position
+    if (data[start] > pivot) {
+      data[pivotIndex] = data[start - 1];
+      data[start - 1] = pivot;
+      pivotIndex = start - 1;
+    } else {
+      data[pivotIndex] = data[start];
+      data[start] = pivot;
+      pivotIndex = start;
+    }
+
+    return pivotIndex;
   }
 
   public static void main(String[] args) {
